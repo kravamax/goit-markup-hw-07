@@ -1,0 +1,44 @@
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * #{$main-margin});
+  margin-top: calc(-1 * #{$main-margin});
+}
+
+.features-item {
+  margin-left: $main-margin;
+  margin-top: $main-margin;
+  flex-basis: calc((100% - #{$main-margin} * 4) / 4);
+}
+
+.features-item:not(:first-child) {
+  margin-left: $main-margin;
+  margin-top: $main-margin;
+}
+
+.features-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+
+  background-color: #f5f4fa;
+}
+
+.features-icons {
+  width: 70px;
+  height: 70px;
+}
+
+.features-title {
+  margin-top: 30px;
+
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.features-text {
+  margin-top: 10px;
+}
