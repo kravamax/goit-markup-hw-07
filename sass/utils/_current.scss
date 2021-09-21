@@ -1,17 +1,16 @@
-.header-link.link.current {
+.current {
   color: $accent-color;
-}
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
 
-.current::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -1px;
-  left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
 
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-
-  background-color: $accent-color;
+    background-color: $accent-color;
+  }
 }

@@ -1,8 +1,8 @@
-.work.section {
+.work {
   padding-top: 0;
 }
 
-.work-title {
+.work__title {
   margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.16;
@@ -16,19 +16,18 @@
   margin-top: calc(-1 * #{$main-margin});
 }
 
-.work-item {
+.work-list__item {
   position: relative;
   margin-left: $main-margin;
   margin-top: $main-margin;
   flex-basis: calc((100% - #{$main-margin} * 3) / 3);
+  &:not(:first-child) {
+    margin-left: $main-margin;
+    margin-top: $main-margin;
+  }
 }
 
-.work-item:not(:first-child) {
-  margin-left: $main-margin;
-  margin-top: $main-margin;
-}
-
-.work-overlay {
+.work-list__overlay {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +41,9 @@
   background: rgba(47, 48, 58, 0.8);
 }
 
-.features-title.work-text {
+.work-list__text {
+  @extend %overlay-text;
+
   margin: 0;
   color: $main-bg-color;
 }

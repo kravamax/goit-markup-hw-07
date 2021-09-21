@@ -4,11 +4,11 @@
   background-color: $secondary-bg-color;
 }
 
-.footer-sections {
+.footer__sections {
   display: flex;
 }
 
-.footer .logo.link {
+.footer__logo {
   color: #ffffff;
 }
 
@@ -18,19 +18,13 @@
   font-style: normal;
 }
 
-.footer-item .footer-link {
-  display: block;
+.footer-address__item {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
-.footer-item:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.footer-link.address {
-  color: #ffffff;
-}
-
-.footer-link {
+.footer-address__link {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -39,59 +33,63 @@
   color: rgba(255, 255, 255, 0.6);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
-.footer-link.link:hover,
-.footer-link.link:focus {
-  color: $accent-color;
+.footer-address__link--main-color {
+  color: #ffffff;
 }
 
 // Footer subscribe
 
-.subscribe {
+.footer__subscribe-section {
   display: flex;
   flex-direction: column;
   margin-left: 70px;
 }
 
-.subscribe-text {
+.footer__subscribe-text {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
   color: $main-bg-color;
 }
 
-.subscribe .social-list {
+.footer__social-list {
   margin-top: 20px;
 }
 
-.subscribe .social-link {
+.footer__social-link {
   background-color: rgba(255, 255, 255, 0.1);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }
 
-.subscribe .social-icon {
+.footer__social-icon {
   fill: $main-bg-color;
-}
-
-.subscribe .social-link:hover,
-.subscribe .social-link:focus {
-  background-color: $accent-color;
 }
 
 // Footer mailing
 
-.mailing {
+.footer__mailing-section {
   display: flex;
   flex-direction: column;
   margin-left: auto;
 }
 
-.mail-form {
+.footer__mail-form {
   display: flex;
   margin-top: 20px;
 }
 
-.mailing-input {
+.footer__mailing-input {
   padding: 14px 15px;
   width: 358px;
 
@@ -103,13 +101,13 @@
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: #ffffff;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
-.mailing .mailing-input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.mailing-button {
+.footer__mailing-button {
   position: relative;
   margin: 0;
   margin-left: 12px;
@@ -119,7 +117,7 @@
   text-align: left;
 }
 
-.mailing-icon {
+.footer__mailing-icon {
   position: absolute;
   width: 24px;
   height: 24px;

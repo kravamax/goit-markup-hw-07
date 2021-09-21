@@ -20,7 +20,7 @@
   transform: translate(-50%, -50%) scale(1.1);
 }
 
-.modal-close {
+.modal__close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -39,22 +39,19 @@
   cursor: pointer;
 }
 
-.modal-close-icon {
+.modal__close-icon {
   width: 18px;
   height: 18px;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .modal__close:hover &,
+  .modal__close:focus & {
+    fill: $accent-color;
+  }
 }
 
-.modal-close:hover .modal-close-icon {
-  fill: $accent-color;
-}
-
-.modal-close:focus .modal-close-icon {
-  fill: $accent-color;
-}
-
-.modal-title {
+.modal__title {
   display: block;
   margin-bottom: 12px;
 
@@ -64,13 +61,13 @@
   color: #212121;
 }
 
-.modal-field {
+.modal__field {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-.input-label {
+.modal__input-label {
   font-size: 12px;
   line-height: calc(14 / 12);
   margin-bottom: 4px;
@@ -78,11 +75,11 @@
   letter-spacing: 0.01em;
 }
 
-.input-box {
+.modal__input-box {
   position: relative;
 }
 
-.input-field {
+.modal__input-field {
   width: 100%;
   padding: 10px;
   padding-left: 41px;
@@ -91,40 +88,40 @@
   border-radius: 4px;
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border-color: $accent-color;
+    outline: none;
+  }
 }
 
-.modal-icon-field {
+.modal__icon-field {
   position: absolute;
   top: 50%;
   left: 14px;
   transform: translateY(-50%);
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .modal__input-field:focus + & {
+    fill: $accent-color;
+  }
 }
 
-.input-field:focus {
-  border-color: $accent-color;
-  outline: none;
-}
-
-.input-field:focus + .modal-icon-field {
-  fill: $accent-color;
-}
-
-.textarea-field {
+.modal__textarea-field {
   padding-top: 12px;
   padding-left: 16px;
   min-height: 120px;
 
   resize: none;
+
+  &::placeholder {
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
-.textarea-field::placeholder {
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.accept-field {
+.modal__accept-field {
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -160,7 +157,7 @@
   border: transparent;
 }
 
-.accept-link {
+.modal__accept-link {
   text-decoration-line: underline;
   color: $accent-color;
 }
